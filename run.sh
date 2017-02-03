@@ -3,7 +3,7 @@ if [ ! -z "${GF_INSTALL_PLUGINS}" ]; then
   OLDIFS=$IFS
   IFS=','
   for plugin in ${GF_INSTALL_PLUGINS}; do
-    grafana-cli --pluginsDir /usr/share/grafana/data/plugins plugins install ${plugin}
+    grafana-cli --pluginsDir /usr/share/grafana/data/plugins plugins install hawkular-datasource
   done
   IFS=$OLDIFS
 fi
